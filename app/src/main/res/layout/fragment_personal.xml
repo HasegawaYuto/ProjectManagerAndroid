@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/personalLayout"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/personalNameLinear" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/personalUserLabel"
+        android:text="Name" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/personalUserLabel"
+        android:id="@+id/personalUserNameText"
+        android:layout_weight="1" />
+
+</LinearLayout>
+
+    <TextView
+        android:layout_below="@+id/personalNameLinear"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/personalProjectSegmentLabel"
+        android:text="Project" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_below="@+id/personalProjectSegmentLabel"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:checkedButton="@+id/seg0"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/seg0"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="@drawable/radio_left"
+            android:button="@null"
+            android:gravity="center"
+            android:text="All"
+            android:layout_weight="1"
+            android:textColor="@drawable/radio_text_color" />
+
+        <RadioButton
+            android:id="@+id/seg1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/radio_center"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Manage"
+            android:textColor="@drawable/radio_text_color" />
+
+        <RadioButton
+            android:id="@+id/seg2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/radio_center"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Join"
+            android:textColor="@drawable/radio_text_color" />
+
+        <RadioButton
+            android:id="@+id/seg3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/radio_right"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Invited"
+            android:textColor="@drawable/radio_text_color" />
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/projectList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/logoutButton"
+        android:text="Log out" />
+
+
+</LinearLayout>
